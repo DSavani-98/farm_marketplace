@@ -27,43 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
         file_put_contents($root_folder. $ProductImageURL, $file);
-
-
-        // $query = "SELECT Email FROM users WHERE Email = ? ";
-        // $stmt = $conn->prepare($query);
-        // $stmt->bind_param("s", $Email);
-        // $stmt->execute();
-        // $result = $stmt->get_result(); 
-        // $row = $result->fetch_assoc(); 
-
-        // $user = new stdClass();
-
-        // if($row){
-        //     $user->message = "There is already an account registered with this email.";
-        //     $myJSON = json_encode($user);
-        //     echo $myJSON;
-        // }else{
-        //     $cmd = "INSERT INTO `users`(`FirstName`, `LastName`, `Email`, `Password`, `TypeAccount`)
-        //      VALUES ('$data->FirstName','$data->LastName','$data->Email','$data->Password','$data->TypeAccount')";
-        //     $sql = $conn->prepare($cmd);
-        //     $sql->execute();
-        //     $last_id = $sql->insert_id;
-        //     if($TypeAccount == "Customer"){
-        //         $cmd = "INSERT INTO `customer`(`Address`, `City`, `PhoneNumber`, `UserId`)
-        //         VALUES ('$data->Address','$data->City','$data->PhoneNumber','$last_id')";
-        //         $sql = $conn->prepare($cmd);
-        //         $sql->execute();
-        //     }else if($TypeAccount == "Farmer"){
-        //         $cmd = "INSERT INTO `farmer`(`Address`, `City`, `PhoneNumber`, `UserId`)
-        //         VALUES ('$data->Address','$data->City','$data->PhoneNumber','$last_id')";
-        //         $sql = $conn->prepare($cmd);
-        //         $sql->execute();
-        //     }
-        //     $user->message = "User created";
-        //     $user->UserId = $last_id;
-        //     $myJSON = json_encode($user);
-        //     echo $myJSON;
-        // }     
-
+    
 }
 ?> 
