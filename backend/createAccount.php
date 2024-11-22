@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = $stmt->get_result(); 
         $row = $result->fetch_assoc(); 
 
+        //Adding validation for email Id and phone number
         $user = new stdClass();
         if($row){
             $user->message = "There is already an account registered with this email.";
