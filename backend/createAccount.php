@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $PhoneNumber = $data->PhoneNumber;
     
 
+        // Code for getting all Users to Check if EmailId already exist before creating new account
         $query = "SELECT Email FROM users WHERE Email = ? ";
         $stmt = $conn->prepare($query);
         $stmt->bind_param("s", $Email);
@@ -28,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $row = $result->fetch_assoc(); 
 
         $user = new stdClass();
-
         if($row){
             $user->message = "There is already an account registered with this email.";
             $myJSON = json_encode($user);
