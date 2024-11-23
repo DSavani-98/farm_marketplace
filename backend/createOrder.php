@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
 
 
+        //Adding DateTime formatting to OrderDate Field
         $order = new stdClass();
         if($stmt->execute()){
             $last_id = $stmt->insert_id;
